@@ -27,7 +27,7 @@ export class ArenaScene extends Phaser.Scene {
     // Player (placeholder: simple circle as texture)
     const texKey = "player-dot";
     if (!this.textures.exists(texKey)) {
-      const g = this.make.graphics({ x: 0, y: 0, add: false });
+      const g = this.make.graphics({ x: 0, y: 0 });
       g.fillStyle(0x5ad7ff, 1);
       g.fillCircle(8, 8, 8);
       g.generateTexture(texKey, 16, 16);
@@ -127,7 +127,7 @@ export class ArenaScene extends Phaser.Scene {
     // small spark texture
     const sparkKey = "spark";
     if (!this.textures.exists(sparkKey)) {
-      const g = this.make.graphics({ x: 0, y: 0, add: false });
+      const g = this.make.graphics({ x: 0, y: 0 });
       g.fillStyle(0xffffff, 1);
       g.fillCircle(4, 4, 4);
       g.generateTexture(sparkKey, 8, 8);
