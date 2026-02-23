@@ -56,7 +56,7 @@ export class ArenaScene extends Phaser.Scene {
       this.scene.start("title");
     });
 
-    // click to cast spell (placeholder particles)
+    // spellcasting (placeholder particles)
     this.input.on("pointerdown", (p: Phaser.Input.Pointer) => {
       this.castPlaceholderSpell(p.worldX, p.worldY);
     });
@@ -107,7 +107,7 @@ export class ArenaScene extends Phaser.Scene {
       g.strokePath();
     }
 
-    // some glowing lines
+    // glow lines
     g.lineStyle(1, 0x1c2f4f, 0.35);
     for (let x = 0; x <= width; x += step * 4) {
       g.beginPath();
@@ -124,7 +124,7 @@ export class ArenaScene extends Phaser.Scene {
   }
 
   private castPlaceholderSpell(x: number, y: number) {
-    // small texture for spark
+    // small spark texture
     const sparkKey = "spark";
     if (!this.textures.exists(sparkKey)) {
       const g = this.make.graphics({ x: 0, y: 0, add: false });
