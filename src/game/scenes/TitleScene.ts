@@ -30,16 +30,11 @@ export class TitleScene extends Phaser.Scene {
     title.setShadow(0, 0, "#5ad7ff", 12, true, true);
 
     const hint = this.add
-      .text(
-        width / 2,
-        height - 40,
-        "WASD/Arrows - Click to cast (placeholder)",
-        {
-          fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial",
-          fontSize: "14px",
-          color: "#6f86aa",
-        },
-      )
+      .text(width / 2, height - 40, "WASD/Arrows - RMB to cast spells", {
+        fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial",
+        fontSize: "14px",
+        color: "#6f86aa",
+      })
       .setOrigin(0.5);
 
     this.tweens.add({
